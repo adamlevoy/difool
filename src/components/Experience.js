@@ -25,7 +25,6 @@ const Experience = () => {
         <img className='logo' src={truffle} alt="truffle suite" />
         <img className='logo' src={hardhat} alt="hardhat" />
       </div>
-
     </section>
   )
 }

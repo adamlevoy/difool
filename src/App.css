@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400|Space+Mono:400");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +12,7 @@
   --dark: #0d0315;
   --grey: #161522;
   --blue: darkslateblue;
+  --lightBlue: #55ddf9;
   --purple: #9325e4;
   --white: white;
 
@@ -17,8 +20,8 @@
   --textColor: var(--white);
 
   /* Type */
-  --headingFont: "Space Mono", monospace;
-  --bodyFont: "Work Sans", sans-serif;
+  --headingFont: "Poppins", sans-serif;
+  --bodyFont: "Poppins", sans-serif;
   --h1: 3.052rem;
   --h2: 2.3rem;
   --h3: 1.953rem;
@@ -37,7 +40,7 @@ body {
   color: var(--textColor);
   font-family: var(--bodyFont);
   font-size: var(--body);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,7 +52,7 @@ h3,
 h4,
 h5 {
   font-family: var(--headingFont);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.3;
 }
 
@@ -77,6 +80,30 @@ h5 {
   max-width: 600px;
   margin-top: 1rem;
   margin-inline: auto;
+}
+
+.header title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+title span {
+  font-size: var(--h1);
+  margin-right: 0.5rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.icons i {
+  font-size: 30px;
+  color: var(--purple);
 }
 
 code {
@@ -154,9 +181,58 @@ button {
   border: none;
   border-radius: 5px;
   margin-block: 1rem;
-  background-color: var(--purple);
-  color: var(--white);
+  color: var(--dark);
   font-size: var(--body);
   font-weight: 400;
   cursor: pointer;
+
+  background: -webkit-linear-gradient(left, var(--purple), var(--lightBlue));
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(
+    left,
+    var(--purple) 30%,
+    var(--lightBlue) 60%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* KeyFrames */
+@-webkit-keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
