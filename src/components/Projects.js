@@ -17,7 +17,7 @@ const Projects = () => {
           <span className='projectIcon'>✨</span>
           <h3>Web3 Msg Me</h3>
           <p>Send me a message via Web3!</p>
-          <Button url="https://difool.netlify.app" text="Enter App" />
+          <Button url="https://w3mm.netlify.app" text="Enter App" />
         </div>
         <div className='projectCard'>
           <span className='projectIcon'>😍</span>
